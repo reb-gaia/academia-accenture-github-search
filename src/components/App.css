@@ -5,10 +5,14 @@
 }
 
 .search {
-  padding-top: 3rem;
+  padding: 2rem;
   text-align: center
 }
 
 #button {
   margin-top: 1.5rem;
+}
+
+img {
+  border-radius: 50%;
 }
