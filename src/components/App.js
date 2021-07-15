@@ -46,7 +46,7 @@ class App extends React.Component {
     return (
       <div>
         <div className="title">
-          <strong>dev.ser</strong>
+          <strong>GitHub search</strong>
         </div>
 
         <div className="search">
