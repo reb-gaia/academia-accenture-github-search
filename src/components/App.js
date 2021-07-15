@@ -8,8 +8,14 @@ class App extends React.Component {
   }
 
   handleTextChange(e) {
+    this.setState({
+      username: e.target.value,
+    })
+  }
+
+  handleClick(e) {
     e.preventDefault();
-    fetch(`https://api.github.com/users/${e.target.value}`)
+    fetch(`https://api.github.com/users/${this.state.username}`)
     .then(res => res.json())
     .then(res => {
       this.setState({
@@ -27,7 +33,7 @@ class App extends React.Component {
         <div className="search">
           <input type="text" onChange={this.handleTextChange.bind(this)}></input>
           <br />
-          <button id="button">Pesquisar</button>
+          <button id="button" onClick={this.handleClick.bind(this)}>Pesquisar</button>
         </div>
         <div>
           {Object.entries(this.state.profile).map((values, key) => (
